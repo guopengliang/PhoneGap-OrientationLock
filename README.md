@@ -1,6 +1,10 @@
 # OrientationLock #
 
-Android Cordova plugin for locking/unlocking the screen orientation from Javascript
+Android Cordova plugin for locking/unlocking the screen orientation from Javascript.
+
+Originally developed by Emil Varga https://github.com/cogitor/PhoneGap-OrientationLock
+
+Modified by Guopeng Liang.
 
 ## Calling the plugin ##
 
