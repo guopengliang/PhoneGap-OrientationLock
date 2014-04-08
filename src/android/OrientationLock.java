@@ -1,4 +1,4 @@
-package com.plugin.phonegap;
+package com.guopengliang.cordova;
 
 import org.json.JSONArray;
 import org.json.JSONException;
