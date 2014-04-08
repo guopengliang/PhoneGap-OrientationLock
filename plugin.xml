@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		id="com.guopengliang.cordova.orientationlock"
-		version="0.1.2">
+		version="0.2.0">
 
 	<name>OrientationLock</name>
 
@@ -19,7 +19,7 @@
 	</engines>
 
 	<js-module src="www/orientationLock.js" name="OrientationLock">
-		<clobbers target="OrientationLock" />
+		<clobbers target="navigator.orientationLock" />
 	</js-module>
 
 	<!-- android -->

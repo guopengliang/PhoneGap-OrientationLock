@@ -1,24 +1,17 @@
-(function(cordova) {
+// clobbers: navigator.orientationlock
 
-	function OrientationLock() { }
+var exec = require('cordova/exec');
 
-	OrientationLock.prototype.lock = function(orientation, success, fail) {
-		return cordova.exec(success, fail, "OrientationLock", "lock", [orientation]);
-	};
+var orientationLock = {
 
-	OrientationLock.prototype.unlock = function(success, fail) {
-		return cordova.exec(success, fail, "OrientationLock", "unlock", []);
-	};
+	lock: function(orientation, success, fail) {
+		exec(success, fail, "OrientationLock", "lock", [orientation]);
+	},
 
-	OrientationLock.install = function() {
-		if (!window.plugins) {
-			window.plugins = {};
-		}
-		window.plugins.orientationLock = new OrientationLock();
-		// backward compatible
-		window.orientationLock = navigator.orientationLock = window.plugins.orientationLock;
-	};
+	unlock: function(success, fail) {
+		exec(success, fail, "OrientationLock", "unlock", []);
+	}
 
-	if (cordova) cordova.addConstructor(OrientationLock.install);
+};
 
-})(window.cordova || window.Cordova || window.PhoneGap);
+module.exports = orientationLock;
